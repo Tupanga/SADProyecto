@@ -1,7 +1,7 @@
 Proyecto: Análisis de Sentimientos - Hinge vs Boo (Tarea A)
 Este repositorio contiene la implementación del preprocesado y los modelos de clasificación para el análisis de satisfacción de usuarios de aplicaciones de citas.
 
-🛠️ Fase 1: Preprocesado de Datos
+Fase 1: Preprocesado de Datos
 En esta etapa, se ha realizado una limpieza profunda de los datasets originales de Hinge y Boo para asegurar la calidad de los datos de entrada del modelo predictivo.
 
 Pasos Realizados:
