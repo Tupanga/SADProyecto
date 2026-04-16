@@ -1,0 +1,44 @@
+Sobre HINGE (Nuestro competidor / Nosotros, dependiendo de a quién representemos):
+
+Lo que odian (Negativos - 4 Clústeres):
+
+Clúster 0: Perfiles falsos y Bots. (Palabras: fake, profiles, accounts).
+
+Clúster 1: Pérdida de tiempo. (Palabras: time, waste, matches - la gente siente que no consigue conectar).
+
+Clúster 2: Excesivamente de pago / Límite de likes. (Palabras: pay, likes, only, day - se quejan del límite diario).
+
+Clúster 3: Baneos injustificados. (Palabras: banned, reason, account, support - problemas graves con moderación y soporte técnico).
+
+Lo que aman (Positivos - 3 Clústeres):
+
+Clúster 0: Mejor que la competencia. (Palabras: better, than, other, apps - los usuarios la prefieren frente a Tinder/Bumble).
+
+Clúster 2: Gratuidad útil. (Palabras: free, pretty, people - aprecian lo que pueden hacer sin pagar).
+
+Sobre BOO:
+
+Lo que odian (Negativos - 4 Clústeres):
+
+Clúster 0: Problemas con mensajes. (Palabras: messege, send, nomatches - frustración en la comunicación).
+
+Clúster 2: Suscripciones y barreras de pago. (Palabras: pay, money, subscription).
+
+Clúster 3: Perfiles falsos. (Palabras: fake, bad, awful).
+
+Lo que aman (Positivos - 3 Clústeres):
+
+Clúster 0 y 1: Buena comunidad. (Palabras: great, people, dating - conectan bien con los demás).
+
+Clúster 2: Buena Interfaz/Experiencia. (Palabras: interface, experience, nice - la app es agradable de usar).
+
+He añadido una columna llamada cluster al final de cada CSV. Cada número representa un problema o una fortaleza. En Tableau, no pongas 'Clúster 0' o 'Clúster 1', cambia esos números por sus nombres reales (ej. 'Perfiles Falsos', 'Problemas de Pago', etc.). Con esto puedes crear un gráfico de barras comparando de qué se quejan más en Hinge vs Boo, y cruzarlo en un mapa interactivo para ver si, por ejemplo, los baneos injustificados ocurren más en una región específica.
+Hay que explicar que usamos TF-IDF para vectorizar el texto preprocesado y aplicamos el 'Método del Codo' evaluando la inercia para encontrar el K-óptimo. Vemos que en ambas apps las quejas se dividen y las k optimas cambian:
+    K_BOO_P = 3
+    K_BOO_N = 4
+    K_HINGE_P = 3
+    K_HINGE_N = 5
+
+Si somos Hinge: "Nuestra principal amenaza son las quejas por soporte técnico (baneos injustificados) y la frustración con el muro de pago. Sin embargo, tenemos una fortaleza brutal: los usuarios nos consideran orgánicamente 'mejores que la competencia'. Debemos flexibilizar ligeramente los likes gratuitos y limpiar los bots para fidelizarlos."
+
+Si somos Boo: "Nuestro punto fuerte es nuestra interfaz y la calidad de nuestra comunidad, pero la barrera técnica en la mensajería y la suscripción está hundiendo nuestras valoraciones. Si solucionamos el flujo de chat, superaremos a Hinge rápidamente."
