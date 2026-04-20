@@ -1,0 +1,17 @@
+{
+  "model": "gemma:2b",
+  "input_file": "Hinge_preprocesado.csv",
+  "total_rows": 9973,
+  "train_rows": 7978,
+  "dev_rows": 1995,
+  "best_strategy": "zero_shot",
+  "best_macro_f1": 0.5185,
+  "minority_label": "neutral",
+  "generated_samples": 1183,
+  "strategies_evaluated": [
+    "zero_shot",
+    "one_shot",
+    "few_shot",
+    "chain_of_thought"
+  ]
+}
