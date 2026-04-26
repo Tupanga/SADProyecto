@@ -1,44 +1,87 @@
-Sobre HINGE (Nuestro competidor / Nosotros, dependiendo de a quién representemos):
+Para nuestro análisis de Hard Clustering, hemos utilizado K-Means asignando cada opinión a un único clúster predominante. Esto nos permite segmentar a los usuarios de forma estricta según su 'queja principal' o 'motivo de satisfacción principal'. Tras vectorizar los textos limpios con TF-IDF y validar el número de clústeres óptimo (K) mediante el método del codo, estas son las conclusiones estratégicas que hemos extraído:
 
-Lo que odian (Negativos - 4 Clústeres):
+Análisis de HINGE (Nuestro competidor / Nosotros)
+En Hinge hemos detectado 4 áreas de queja principales y 3 fortalezas claras:
 
-Clúster 0: Perfiles falsos y Bots. (Palabras: fake, profiles, accounts).
+Puntos Débiles (Negativos):
 
-Clúster 1: Pérdida de tiempo. (Palabras: time, waste, matches - la gente siente que no consigue conectar).
+Clúster 0 - Invasión de Bots: (Palabras clave: fake, profiles, accounts, waste). Representa a los usuarios que sienten que la app está llena de perfiles falsos, lo que les hace percibir que pierden el tiempo.
 
-Clúster 2: Excesivamente de pago / Límite de likes. (Palabras: pay, likes, only, day - se quejan del límite diario).
+Clúster 1 - Falta de Resultados: (Palabras clave: time, matches, dating). Usuarios frustrados que invierten tiempo pero no consiguen matches reales ni citas.
 
-Clúster 3: Baneos injustificados. (Palabras: banned, reason, account, support - problemas graves con moderación y soporte técnico).
+Clúster 2 - El Muro de Pago: (Palabras clave: pay, likes, only, day). Una queja masiva sobre las restricciones de la versión gratuita, específicamente el límite estricto de 'likes' por día.
 
-Lo que aman (Positivos - 3 Clústeres):
+Clúster 3 - Moderación Severa/Baneos: (Palabras clave: banned, reason, account, appeal). Un problema crítico de soporte técnico; los usuarios denuncian que sus cuentas son bloqueadas sin motivo y no reciben respuesta al apelar.
 
-Clúster 0: Mejor que la competencia. (Palabras: better, than, other, apps - los usuarios la prefieren frente a Tinder/Bumble).
+Fortalezas (Positivos):
 
-Clúster 2: Gratuidad útil. (Palabras: free, pretty, people - aprecian lo que pueden hacer sin pagar).
+Clúster 0 - Superioridad frente a la competencia: (Palabras clave: better, than, other, apps). Muchos usuarios valoran Hinge precisamente por comparación, considerándola superior a Tinder o Bumble.
 
-Sobre BOO:
+Clúster 1 - Calidad Humana: (Palabras clave: great, nice, people). Destacan la calidad de la gente que se encuentra en la plataforma.
 
-Lo que odian (Negativos - 4 Clústeres):
+Clúster 2 - Valor del Tier Gratuito: (Palabras clave: free, pretty, really). Aunque haya quejas sobre los límites, otro sector valora que se pueda usar gratuitamente con buenos resultados.
 
-Clúster 0: Problemas con mensajes. (Palabras: messege, send, nomatches - frustración en la comunicación).
+Análisis de BOO (La otra aplicación)
+En Boo la distribución de quejas y alabanzas es diferente, mostrando un perfil de usuario distinto:
 
-Clúster 2: Suscripciones y barreras de pago. (Palabras: pay, money, subscription).
+Puntos Débiles (Negativos):
 
-Clúster 3: Perfiles falsos. (Palabras: fake, bad, awful).
+Clúster 0 - Bugs de Mensajería: (Palabras clave: messages, send, problem, nomatches). Aquí el problema no es tanto el baneo, sino fallos técnicos graves que impiden enviar mensajes correctamente.
 
-Lo que aman (Positivos - 3 Clústeres):
+Clúster 2 - Suscripción Agresiva: (Palabras clave: pay, money, subscription). Rechazo frontal al modelo de monetización y al coste de la suscripción.
 
-Clúster 0 y 1: Buena comunidad. (Palabras: great, people, dating - conectan bien con los demás).
+Clúster 3 - Falsedad y Mala Experiencia: (Palabras clave: fake, bad, awful, experience). Percepción de perfiles falsos que arruinan la confianza en la app.
+(Nota: El Clúster 1 es una mezcla de quejas sobre saturación y pagos).
 
-Clúster 2: Buena Interfaz/Experiencia. (Palabras: interface, experience, nice - la app es agradable de usar).
+Fortalezas (Positivos):
 
-He añadido una columna llamada cluster al final de cada CSV. Cada número representa un problema o una fortaleza. En Tableau, no pongas 'Clúster 0' o 'Clúster 1', cambia esos números por sus nombres reales (ej. 'Perfiles Falsos', 'Problemas de Pago', etc.). Con esto puedes crear un gráfico de barras comparando de qué se quejan más en Hinge vs Boo, y cruzarlo en un mapa interactivo para ver si, por ejemplo, los baneos injustificados ocurren más en una región específica.
-Hay que explicar que usamos TF-IDF para vectorizar el texto preprocesado y aplicamos el 'Método del Codo' evaluando la inercia para encontrar el K-óptimo. Vemos que en ambas apps las quejas se dividen y las k optimas cambian:
-    K_BOO_P = 3
-    K_BOO_N = 4
-    K_HINGE_P = 3
-    K_HINGE_N = 5
+Clúster 0 y 1 - El Concepto y la Comunidad: (Palabras clave: good, great, people, love). A los usuarios les encanta la idea detrás de la aplicación y la comunidad que se está formando.
 
-Si somos Hinge: "Nuestra principal amenaza son las quejas por soporte técnico (baneos injustificados) y la frustración con el muro de pago. Sin embargo, tenemos una fortaleza brutal: los usuarios nos consideran orgánicamente 'mejores que la competencia'. Debemos flexibilizar ligeramente los likes gratuitos y limpiar los bots para fidelizarlos."
+Clúster 2 - Diseño y Usabilidad (UX/UI): (Palabras clave: nice, interface, experience). A diferencia de Hinge, Boo recibe alabanzas específicas por su interfaz y lo agradable que es la experiencia de uso.
 
-Si somos Boo: "Nuestro punto fuerte es nuestra interfaz y la calidad de nuestra comunidad, pero la barrera técnica en la mensajería y la suscripción está hundiendo nuestras valoraciones. Si solucionamos el flujo de chat, superaremos a Hinge rápidamente."
+
+
+
+Resultados del Soft Clustering (LDA):
+Siguiendo la recomendación de explorar técnicas de Soft Clustering, hemos implementado un modelo LDA (Latent Dirichlet Allocation) usando la librería gensim.
+
+¿Qué aporta esto frente al K-Means que ya teníamos? El K-Means obligaba a clasificar cada comentario en un solo clúster (Ej: "Este usuario se queja del precio"). Sin embargo, la realidad es más compleja: un usuario en un mismo párrafo puede quejarse del precio y además decir que la app falla. El modelo LDA nos ha permitido descubrir el ADN semántico de las opiniones, calculando qué porcentaje de cada comentario pertenece a cada tópico.
+
+HINGE: El Rey de la Competencia, pero con pies de barro
+El algoritmo ha encontrado 4 temáticas subyacentes en las críticas y 3 en los elogios:
+
+Los Tópicos Negativos (Dónde sangra Hinge):
+
+Tópico 1 (Errores Técnicos en el Core): (cant, messages, phone, send, number). Los usuarios detectan bugs críticos justo en los momentos clave: al intentar verificar su teléfono o al enviar mensajes.
+
+Tópico 2 (Monetización Frustrante): (pay, profiles, likes, money, time). Sentimiento de que la app exige dinero constantemente para poder ver perfiles o dar likes, haciendo que los usuarios sientan que pierden el tiempo si no pagan.
+
+Tópico 3 (La Guillotina Automática - Baneos): (banned, account, reason, support, why). Este es el hallazgo más grave. Existe una temática fuertemente marcada por el cierre injustificado de cuentas y la ineficacia del equipo de soporte técnico para dar explicaciones.
+
+Tópico 0 (El Cementerio de Matches): (people, match, deleted, apps). Usuarios que simplemente no consiguen conectar con nadie, se frustran y acaban borrando la aplicación.
+
+Los Tópicos Positivos (Por qué sobreviven):
+
+Tópico 1 (El "Menos Malo" del Mercado): (more, apps, better, other, best, than). Un posicionamiento clarísimo: a la gente le gusta Hinge porque objetivamente la consideran "mejor que las otras" (Tinder, Bumble, etc.).
+
+Tópico 2 (Éxito Real): (met, people, nice, great). Tópico dominado por historias de éxito; usuarios que genuinamente han conocido a personas agradables.
+
+
+BOO: Excelente Diseño, pero crisis de confianza
+Boo presenta un perfil muy distinto. Atrae por su diseño, pero frustra por sus barreras:
+
+Los Tópicos Negativos (Las barreras de Boo):
+
+Tópico 2 (El muro de verificación y pago): (money, time, verify, cant, free). Un problema muy específico de Boo: el sistema para verificar que eres humano falla o requiere pagos que frustran al usuario de la capa gratuita.
+
+Tópico 3 (Invasión de Bots): (fake, pay, people, there). Un tópico latente fuerte sobre la existencia de perfiles falsos que merman la confianza en la plataforma.
+
+Tópico 0 (Fatiga y Saturación): (too, many, matches, makes, feel, experience). Un problema curioso de UX: algunos usuarios sienten que la experiencia es abrumadora, reciben demasiados estímulos (matches, notificaciones) y se saturan.
+
+Tópico 1 (Decepción General): (bad, apps, subscription, get). Insatisfacción genérica ligada al modelo de suscripción.
+
+Los Tópicos Positivos (La magia de Boo):
+
+Tópico 2 (Una UX/UI Enamoradiza): (nice, cool, easy, use, awesome, interesting). El gran triunfo de Boo. Su interfaz y su sistema de personalidades generan una experiencia de usuario (UX) que los usuarios tildan de "guay", "fácil" e "interesante".
+
+Tópico 1 (Comunidad Divertida): (great, people, fun, amazing). El ambiente en Boo se percibe más lúdico y divertido que la tensión clásica de otras apps de citas.
