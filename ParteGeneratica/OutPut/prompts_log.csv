@@ -1,0 +1,23 @@
+rank,model,strategy,macro_f1,accuracy,prompt_example,input_example,output_example
+1,mistral,few_shot,0.5000,0.7000,"Classify the sentiment of the following dating app review as positive, negative, or neutral.
+
+Review: ""Its very different from other dating apps. Just started, and Im more excited than my past experiences""
+Answer: positive
+Review: ""I dont want to date women young enough to be my daughter or granddaughter""
+Answer: negative
+Review: ""I havent matched with anyone yet, but it seems better than other apps so far.""
+Answer: neutral
+Review: ""Good.""
+Answer: positive
+Review: ""Great if youre looking for prostitutes""
+Answer: negative
+Review: ""Its alright""
+Answer: neutral
+Review: ""Idk if I can filter out the girls but I just want dudes""
+Answer: neutral
+Review: ""You advertise 50% off membership sale. Sounds great. I goto sign up. All the prices are the same as they have been except you have a number double the price crossed out... Thats actually bait and switch and not legal in most states.""
+Answer: negative
+Review: ""Love the universe where we can interact without necessarily matching! Its like social media and dating app in one.""
+Answer: positive
+Review: ""[TEXTO DE EJEMPLO]""
+Answer (one word only):",its alright if you guys added a language filter i would drop money to upgrade tired of scrolling through people not being able to filter by language,neutral
