@@ -1,0 +1,12 @@
+{
+    "rutas": {
+        "archivo_entrada": "Hinge.csv",
+        "modelo_entrenado": "modelo_entrenado.pkl",
+        "vectorizador": "vectorizador.pkl"
+    },
+    "parametros_csv": {
+        "columna_texto": "content",
+        "separador": ","
+    },
+    "modelo_activo": "RegresionLogistica_SMOTE"
+}
