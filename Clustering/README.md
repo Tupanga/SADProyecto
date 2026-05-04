@@ -13,10 +13,16 @@ El código está dividido en 4 scripts principales, que representan la evolució
 1.  `clustering.py`: Pipeline básico de K-Means y vectorización TF-IDF.
 2.  `hard_c.py`: Implementación definitiva de **Hard Clustering (K-Means)**. Asigna cada comentario a un único clúster y extrae las palabras clave (unigramas) más representativas de cada grupo. Genera los CSVs finales con la columna `cluster_hard`.
 3.  `soft_c.py`: Implementación de **Soft Clustering (LDA)** mediante la librería Gensim. Detecta tópicos latentes y asigna probabilidades de pertenencia a cada comentario.
-4.  `soft_c_bigramas.py`: Evolución del modelo LDA. Integra detección automática de **Bigramas** (ej. *fake_profiles*, *waste_time*) antes de modelar, logrando un contexto semántico mucho más maduro y exacto para las decisiones de negocio.
+4.  `soft_c_con_bigramas.py`: Evolución del modelo LDA. Integra detección automática de **Bigramas** (ej. *fake_profiles*, *waste_time*) antes de modelar, logrando un contexto semántico mucho más maduro y exacto para las decisiones de negocio.
 
 ## ⚙️ Requisitos Previos (Instalación)
 
 Para ejecutar estos scripts, necesitas tener instalado Python 3 y las siguientes librerías. Puedes instalarlas todas de golpe ejecutando este comando en tu terminal o consola (Command Prompt / PowerShell):
 ```bash
 pip install pandas scikit-learn matplotlib gensim
+
+El orden de ejecucion es el siguiente:
+  python clustering.py (genera los graficos del metodo del codo)
+  python soft_c.py
+  python hard_c.py
+  python soft_c_con_bigramas.py
